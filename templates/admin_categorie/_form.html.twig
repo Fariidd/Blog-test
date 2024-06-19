@@ -1,0 +1,4 @@
+{{ form_start(form) }}
+    {{ form_row(form.name,{'attr': {'class': 'form-control mb-2'} , 'label':'Nom'})}}
+    <button class="btn btn-primary">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}

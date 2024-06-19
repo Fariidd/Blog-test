@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nous Contacter{% endblock %}
+
+{% block body %}
+
+
+    <div class="container">
+        <h1>Nous contacter</h1>
+        {{ form_start(form) }}
+            {{ form_row(form.email,{'attr': {'class': 'form-control'}})}}
+            {{ form_row(form.subject,{'attr': {'class': 'form-control'},'label':'Objet de la demande'})}}
+            {{ form_row(form.content,{'attr': {'class': 'form-control'},'label':'Message'})}}
+            {{ form_row(form.envoyer,{'attr': {'class': 'mt-3 btn btn-primary'},'label':'Envoyer'})}}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

@@ -1,0 +1,8 @@
+{{ form_start(form) }}
+    {{ form_row(form.pseudo, {'attr': {'class': 'form-control'}}) }}
+    {{ form_row(form.email, {'attr': {'class': 'form-control'}}) }}
+    {{ form_row(form.plainPassword, {'attr': {'class': 'form-control'}}) }}
+    {{ form_row(form.imageFile, {'attr': {'class': 'form-control'}}) }}
+
+    <button class="btn btn-primary mt-3">{{ button_label|default('Modifier') }}</button>
+{{ form_end(form) }}

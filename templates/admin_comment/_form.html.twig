@@ -1,0 +1,6 @@
+{{ form_start(form) }}
+    {{ form_row(form.content ,{'attr': {'class': 'form-control'}}) }}
+{{ form_row(form.article ,{'attr': {'class': 'form-control'}}) }}
+{{ form_row(form.user ,{'attr': {'class': 'form-control'}}) }}
+    <button class="btn btn-primary mt-4">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}

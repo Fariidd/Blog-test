@@ -1,0 +1,13 @@
+<article class="mb-5">
+    <div class="row">
+        <div class="col-md-{{ rightCol ?? 7 }}">
+            <h2 class="article-title">
+                <a href="{{ path('app_article_show',{ 'id': article.id })}}" class="text-decoration-none">{{ article.titre }}</a>
+            </h2>
+            <p>
+                {{ article.createdAt|date('d M Y') }} /
+            </p>
+            {{article.content|striptags|slice(0,139) ~ '...' }}
+        </div>
+    </div>
+</article>

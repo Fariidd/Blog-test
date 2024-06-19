@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello LookupController!{% endblock %}
+
+{% block body %}
+    <h1 class="pb-5">Articles Trouvés : </h1>
+
+    {% for article in articles %}
+        <div>
+            <h2>{{ article.titre }} <em class="px-5">Publié le : {{ article.createdAt ? article.createdAt|date('Y-m-d H:i:s') : '' }}</em></h2>
+            <h3></h3>
+
+            <div>
+                <a href="{{ path('app_article_show', {'id': article.id}) }}">Consulter l'article</a>
+            </div>
+        </div>
+    {% else %}
+      <div>
+          Aucun article(s) trouvé(s)
+      </div>
+
+    {% endfor %}
+{% endblock %}
